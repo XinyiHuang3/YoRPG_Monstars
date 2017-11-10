@@ -20,15 +20,17 @@ public class Protagonist extends Character{
     public Protagonist(String n){
 	this(); 
 	name = n;}
+    
     public boolean isAlive(){
         return (HP>0); 
     }
     public int getDefense(){
 	return defense;
-    }
+	}
     public String getName(){
 	return name;
     }
+    
     public void	lowerHP(int hp_dec){
 	HP -= hp_dec;
     }
@@ -36,7 +38,7 @@ public class Protagonist extends Character{
 	int damage= 0;
 	damage= (int) (strength*attackRating - monster.getDefense()); 
 	return damage;
-    }
+	}
     public void specialize(){
 	//prepares the Protagonist to preform a special attack
 	defense -= 5;

@@ -4,7 +4,7 @@
 // 2017-11-08
 
 public class Monster extends Character{
-    private int HP;
+     private int HP;
     private int strength;
     public int defense;
     private double attackRating;
@@ -17,15 +17,18 @@ public class Monster extends Character{
 	attackRating= 1;
 	name = "Mon";;
     }
+    
     public boolean isAlive(){
 	return HP>0;
     }
     public int getDefense(){
 	return defense;
     }
+    
     public String getName(){
 	return name;
     }
+    
     public void lowerHP(int n){
 	HP -= n;
     }
@@ -35,6 +38,7 @@ public class Monster extends Character{
 	protagonist.lowerHP(damage); 
 	return damage;
     }
+    
 
     
     public static void main(String [] args){}
