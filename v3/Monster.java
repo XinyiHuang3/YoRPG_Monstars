@@ -7,7 +7,8 @@ public class Monster extends Character{
     protected String name; 
 
     
-    Monster(){
+    public Monster(){
+	super();
 	HP= 150;
 	strength= (int)(Math.random()*20 + 45);
 	defense= 20;
@@ -15,6 +16,7 @@ public class Monster extends Character{
 	name = "Mon";;
     }
 
+   
     public String getName(){
 	return name;
     }

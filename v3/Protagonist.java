@@ -8,12 +8,14 @@ public class Protagonist extends Character{
 
     
     public Protagonist(){
+	super();
 	name = "Pro"; 
 	HP= 125;
 	strength= 100;
 	defense= 40;
 	attackRating= 0.4;
     }
+    
     public Protagonist(String n){
 	this(); 
 	name = n;}

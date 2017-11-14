@@ -78,7 +78,29 @@ public class YoRPG
     catch ( IOException e ) { }
 
     //instantiate the player's character
-    pat = new Protagonist( name );
+	System.out.print( "Do you want to be an Archer, a Warrior, a Wizard, a Skeleton, a Slime, or a Zombie?" );
+	
+
+        if (type.equals("Warrior")){
+	    pat = new Warrior(name);
+	}
+	if (type.equals("Archer")){
+	    pat = new Archer(name);
+	}
+	if (type.equals("Wizzard")){
+	    pat = new Wizzard(name);
+	}
+	if (type.equals("Skeleton")){
+	    pat = new Skeleton(name);
+	}
+	if (type.equals("Slime")){
+	    pat = new Slime(name);
+	}
+	if (type.equals("Zombie")){
+	    pat = new Zombie(name);
+	}
+
+	System.out.println(pat.about());
 
   }//end newGame()
 
