@@ -100,7 +100,7 @@ public class YoRPG
 	    pat = new Zombie(name);
 	}
 
-	System.out.println(pat.about());
+	//	System.out.println(pat.about());
 
   }//end newGame()
 
@@ -141,7 +141,7 @@ public class YoRPG
           pat.normalize();
 
         d1 = pat.attack( smaug );
-        d2 = smaug.attack( pat );
+        d2 = smaug.attack( (Monster)pat );
 
         System.out.println( "\n" + pat.getName() + " dealt " + d1 +
                             " points of damage.");
