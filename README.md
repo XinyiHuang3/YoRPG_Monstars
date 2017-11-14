@@ -1,13 +1,13 @@
 # YoRPG_Monstars
-##YoRPG
+## YoRPG 
 The test driver for this game
-##Characters
+## Characters
 identical codes from both Protagonist and Monster to robust the code
-###Protagonist
+### Protagonist
 #### Warrior
 #### Wizard
 #### Archer
-###Monster
+### Monster
 #### Skeleton
 #### Slime 
 #### Zombie
