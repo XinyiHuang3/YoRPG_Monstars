@@ -13,7 +13,7 @@ public class Character{
     public void lowerHP(int hp_dec){
 	HP -= hp_dec;
     }
-    public int attack(Monster monster){
+    public int attack(Character monster){ //a Character is not a Monster, but a Monster is-a Character
 	int damage= 0;
 	damage= (int) (strength*attackRating - monster.getDefense()); 
 	return damage;

@@ -5,7 +5,6 @@
 
 public class Monster extends Character{
     protected String name; 
-
     
     public Monster(){
 	super();
@@ -16,6 +15,10 @@ public class Monster extends Character{
 	name = "Mon";;
     }
 
+    public Monster(String n){
+	this();
+	name = n;
+    }
    
     public String getName(){
 	return name;
