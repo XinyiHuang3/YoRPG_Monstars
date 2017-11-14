@@ -1,19 +1,19 @@
 public class Character{
-    public int HP;
-    public int strength;
-    public int defense;
-    public double attackRating;
+    protected int HP;
+    protected int strength;
+    protected int defense;
+    protected double attackRating;
     
-    public boolean isAlive(){
+    protected boolean isAlive(){
         return (HP>0); 
     }
-    public int getDefense(){
+    protected int getDefense(){
 	return defense;
     }
-    public void	lowerHP(int hp_dec){
+    protected void lowerHP(int hp_dec){
 	HP -= hp_dec;
     }
-    public int attack(Monster monster){
+    protected int attack(Monster monster){
 	int damage= 0;
 	damage= (int) (strength*attackRating - monster.getDefense()); 
 	return damage;
