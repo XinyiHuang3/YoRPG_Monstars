@@ -81,22 +81,22 @@ public class YoRPG
 	System.out.print( "Do you want to be an Archer, a Warrior, a Wizard, a Skeleton, a Slime, or a Zombie?" );
 	
 
-        if (type.equals("Warrior")){
+        if (.equals("Warrior")){
 	    pat = new Warrior(name);
 	}
-	if (type.equals("Archer")){
+	if (.equals("Archer")){
 	    pat = new Archer(name);
 	}
-	if (type.equals("Wizzard")){
+	if (.equals("Wizzard")){
 	    pat = new Wizzard(name);
 	}
-	if (type.equals("Skeleton")){
+	if (.equals("Skeleton")){
 	    pat = new Skeleton(name);
 	}
-	if (type.equals("Slime")){
+	if (.equals("Slime")){
 	    pat = new Slime(name);
 	}
-	if (type.equals("Zombie")){
+	if (.equals("Zombie")){
 	    pat = new Zombie(name);
 	}
 
@@ -141,7 +141,7 @@ public class YoRPG
           pat.normalize();
 
         d1 = pat.attack( smaug );
-        d2 = smaug.attack( (Monster)pat );
+        d2 = smaug.attack( pat );
 
         System.out.println( "\n" + pat.getName() + " dealt " + d1 +
                             " points of damage.");
