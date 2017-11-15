@@ -3,7 +3,7 @@
 // HW 28 -- Ye Olde Role Playing Game
 // 2017-11-08
 
-public class Protagonist extends Character{
+public abstract class Protagonist extends Character{
     protected String name;
 
     
@@ -31,11 +31,11 @@ public class Protagonist extends Character{
 	defense -= 5;
 	attackRating += 5;
     }
-    public void normalize(){
+    public abstract void normalize();
 	//prepares the Protagonist to preform a normal attack
-	defense = 40;
-	attackRating = 0.4;
-    }
+	//	defense = 40;
+	//	attackRating = 0.4;
+    
 	
     public static void main(String [] args){}
 } 
