@@ -1,4 +1,7 @@
 # YoRPG_Monstars
+# Shafali Gupta
+# Xinyi Huang
+# Max Millar 
 ## YoRPG 
 The test driver for this game
 ## Characters
