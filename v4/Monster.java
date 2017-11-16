@@ -24,17 +24,17 @@ public class Monster extends Character{
 	return name;
     }
 
-     public boolean isAlive(){
+    /* public boolean isAlive(){
 	return HP>0;
-    }
-    public int getDefense(){
+	}*/
+    /*public int getDefense(){
 	return defense;
-    }
+	}*/
     
 
-    public void lowerHP(int n){
+    /*public void lowerHP(int n){
 	HP -= n;
-    }
+	}*/
     public int attack(Protagonist protagonist){
 	int damage = 0; 
 	damage= (int)( strength*attackRating) -  protagonist.getDefense();

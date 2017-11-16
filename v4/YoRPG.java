@@ -25,7 +25,7 @@ public class YoRPG
     private int moveCount;
     private boolean gameOver;
     private int difficulty;
-    
+
     private InputStreamReader isr;
     private BufferedReader in;
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -108,7 +108,7 @@ public class YoRPG
     public boolean playTurn()
     {
 	int i = 1;
-	int d1, d2;
+	int d1, d2, h;
 
 	if ( Math.random() >= ( difficulty / 3.0 ) )
 	    System.out.println( "\nNothing to see here. Move along!" );
@@ -124,35 +124,34 @@ public class YoRPG
 		// ...but if you get hit, you take more damage.
 		try {
 		    System.out.println( "\nDo you feel lucky?" );
-		    System.out.println( "\t1: Nay.\n\t2: Aye! \n\t3: I require aid!" );
+		    System.out.println( "\t1: Nay.\n\t2: Aye \n\t3: Heal!!" );
 		    i = Integer.parseInt( in.readLine() );
 		}
 		catch ( IOException e ) { }
 
 		if ( i == 2 ){
 		    pat.specialize();
-		    d1 = pat.attack( smaug );
+		    d1 = pat.attack(smaug);
 		    System.out.println( "\n" + pat.getName() + " dealt " + d1 +
 					" points of damage.");
 		}
-		else if ( i == 3){
-		    pat.heal();
+		if(i == 3){
+		    h =  pat.heal();
+		    System.out.println("\n" + pat.getName() + " healed " + h +  " points of HP");
 		}
 		else{
 		    pat.normalize();
-		    d1 = pat.attack( smaug );
+		    d1 = pat.attack(smaug);
 		    System.out.println( "\n" + pat.getName() + " dealt " + d1 +
-					" points of damage.");
+				    " points of damage.");
 		}
-
+		
 		d2 = smaug.attack( pat );
-
 
 		System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() +
 				    " for " + d2 + " points of damage.");
-		System.out.println(smaug.HP + "smaug");
-		System.out.println(pat.HP + "pat");
 
+		System.out.println(pat.getName() + "'s HP: " + pat.HP);
 	    }//end while
 
 	    //option 1: you & the monster perish

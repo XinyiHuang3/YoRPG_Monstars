@@ -19,9 +19,11 @@ public class Character{
 	monster.lowerHP(damage);
 	return damage;
     }
-    public void heal() {
-	HP += Math.random() * 40 + 20;
-    }
+     public int  heal() {
+	 int healt =(int) ( Math.random() * 40 + 20);
+	HP += healt;
+	return healt;
+	}
 
     public static void main(String [] args){}
 }
