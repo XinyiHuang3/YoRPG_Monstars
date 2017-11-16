@@ -20,7 +20,7 @@ Monster that has a higher HP
 Monster that has a hgiher defense
 #### Zombie
 Monster that has a higher Strength
-##How To Battle
+# How To Battle
 There are 3 options:
 Normal Attack
 Special Attack - Higher attack, lower defense
