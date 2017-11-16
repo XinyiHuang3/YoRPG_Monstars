@@ -23,7 +23,10 @@ Monster that has a higher Strength
 # How To Battle
 There are 3 options:
 ### Normal Attack
-### Special Attack - Higher attack, lower defense
-### Heal - Heals player but does not attack enemy
+Basic attack with normal stats
+### Special Attack 
+Higher attack, lower defense
+### Heal 
+Heals player but does not attack enemy
 
 We had to change how the attacks are done so that the player doesn't attack when healing.
