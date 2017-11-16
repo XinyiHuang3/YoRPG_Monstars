@@ -4,7 +4,7 @@ public class Archer extends Protagonist{
 	strength += 10;
     }
 
-    public static String about(){
+    public String about(){
 	return "Archer has a higher strength.";
     }
      public void normalize(){
@@ -12,4 +12,9 @@ public class Archer extends Protagonist{
 	defense = 40;
 	attackRating = 0.4;
 }
+     public void specialize(){
+	//prepares the Protagonist to preform a special attack
+	defense -= 5;
+	attackRating += 5;
+    }
 }

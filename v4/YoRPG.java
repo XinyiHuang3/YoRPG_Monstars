@@ -25,7 +25,7 @@ public class YoRPG
     private int moveCount;
     private boolean gameOver;
     private int difficulty;
-
+    
     private InputStreamReader isr;
     private BufferedReader in;
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -124,24 +124,35 @@ public class YoRPG
 		// ...but if you get hit, you take more damage.
 		try {
 		    System.out.println( "\nDo you feel lucky?" );
-		    System.out.println( "\t1: Nay.\n\t2: Aye!" );
+		    System.out.println( "\t1: Nay.\n\t2: Aye! \n\t3: I require aid!" );
 		    i = Integer.parseInt( in.readLine() );
 		}
 		catch ( IOException e ) { }
 
-		if ( i == 2 )
+		if ( i == 2 ){
 		    pat.specialize();
-		else
+		    d1 = pat.attack( smaug );
+		    System.out.println( "\n" + pat.getName() + " dealt " + d1 +
+					" points of damage.");
+		}
+		else if ( i == 3){
+		    pat.heal();
+		}
+		else{
 		    pat.normalize();
+		    d1 = pat.attack( smaug );
+		    System.out.println( "\n" + pat.getName() + " dealt " + d1 +
+					" points of damage.");
+		}
 
-		d1 = pat.attack( smaug );
 		d2 = smaug.attack( pat );
 
-		System.out.println( "\n" + pat.getName() + " dealt " + d1 +
-				    " points of damage.");
 
 		System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() +
 				    " for " + d2 + " points of damage.");
+		System.out.println(smaug.HP + "smaug");
+		System.out.println(pat.HP + "pat");
+
 	    }//end while
 
 	    //option 1: you & the monster perish

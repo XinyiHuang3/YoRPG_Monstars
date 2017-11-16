@@ -5,7 +5,6 @@
 
 public abstract class Protagonist extends Character{
     protected String name;
-
     
     public Protagonist(){
 	super();
@@ -26,16 +25,15 @@ public abstract class Protagonist extends Character{
     }
     
  
-    public void specialize(){
+    public abstract void specialize();
 	//prepares the Protagonist to preform a special attack
-	defense -= 5;
-	attackRating += 5;
-    }
+	
     public abstract void normalize();
 	//prepares the Protagonist to preform a normal attack
 	//	defense = 40;
 	//	attackRating = 0.4;
-    
-	
+
+    public abstract String about();
+
     public static void main(String [] args){}
 } 
